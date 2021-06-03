@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS give_logs (
 -- used for leaderboards as part of the economy suite
 CREATE TABLE IF NOT EXISTS leaderboards ( -- there are more leaderboards than this, not all of them are stored here
   uid          BIGINT PRIMARY KEY NOT NULL,
-  pillages     BIGINT NOT NULL, -- number of pillaged emeralds
+  stolen       BIGINT NOT NULL, -- amount of stolen gold
   mobs_killed  BIGINT NOT NULL,
   fish         BIGINT NOT NULL -- number of fish fished up
 );
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS warnings (
 
 -- used in !!randommc command
 CREATE TABLE IF NOT EXISTS mcservers (
-  owner_id BIGINT NOT NULL, -- discord owner id of the server
+  owner_id BIGINT NOT NULL, -- discord owner id of the server TODO:Delete this once im done
   host     VARCHAR(100), -- hostname/ip/address of server
   link     VARCHAR(250) -- learn more link
 );
